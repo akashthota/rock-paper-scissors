@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+        <script>
+            function playRound(psel,csel){
+                if(psel=="rock"){
+                    if(csel=="paper"){
+                        console.log(`You Lose! $(csel) beats $(psel)`);
+                         alert("You Lose! paper beats rock");
+                    }if(csel=="scissors"){
+                        console.log(`You Win! rock beats scissors`);
+                        alert("You Win! rock beats scissors");
+                    }
+                   if(csel==psel){
+                    console.log("Draw :V");
+                    alert("Draw :V");
+                }
+                    }
+                
+                if(psel=="paper"){
+                    if(csel=="rock"){
+                        console.log(`You Win! $(psel) beats $(csel)`);
+                        alert(`You Win! paper beats rock`);
+                    }
+                    if(csel=="scissors"){
+                        console.log(`You Lose! $(csel) beats $(psel)`);
+                         alert(`You Lose! scissors beats paper`);
+                    }
+                    if(csel==psel){
+                    console.log("Draw :V");
+                    alert("Draw :V");
+                }
+                }
+                if(psel=="scissors"){
+                    if(csel=="rock"){
+                        console.log(`You Lose! $(csel) beats $(psel)`);
+                        alert(`You Lose! rock beats scissors`);
+                    }
+                    if(csel=="paper"){
+                        console.log(`You Win! $(psel) beats $(csel)`);
+                        alert(`You Win! scissors beats paper`);
+                    }
+                    if(csel==psel){
+                    console.log("Draw :V");
+                    alert("Draw :V");
+                }
+                }
+            }
+            
+                function random(){
+                    let arr=["rock","paper","scissors"];
+                    let x=Math.floor(Math.random(1)*2);
+                    return arr[x];
+                }
+                let csel=random();
+                let psel=prompt("Enter your choice");
+                psel=psel.toLowerCase();
+                playRound(psel,csel);
+            </script>
+    
+</html>
