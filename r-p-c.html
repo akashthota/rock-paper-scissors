@@ -1,14 +1,20 @@
 <!DOCTYPE HTML>
 <html>
-        <script>
-            function playRound(psel,csel){
+    <script>
+        let countp=0;
+        let countc=0;
+        function game(){
+            while(countp<5 && countc<5){
+                function playRound(psel,csel){
                 if(psel=="rock"){
                     if(csel=="paper"){
                         console.log(`You Lose! $(csel) beats $(psel)`);
                          alert("You Lose! paper beats rock");
+                         countc++;
                     }if(csel=="scissors"){
                         console.log(`You Win! rock beats scissors`);
                         alert("You Win! rock beats scissors");
+                        countp++;
                     }
                    if(csel==psel){
                     console.log("Draw :V");
@@ -20,10 +26,12 @@
                     if(csel=="rock"){
                         console.log(`You Win! $(psel) beats $(csel)`);
                         alert(`You Win! paper beats rock`);
+                        countp++;
                     }
                     if(csel=="scissors"){
                         console.log(`You Lose! $(csel) beats $(psel)`);
                          alert(`You Lose! scissors beats paper`);
+                         countc++;
                     }
                     if(csel==psel){
                     console.log("Draw :V");
@@ -34,10 +42,12 @@
                     if(csel=="rock"){
                         console.log(`You Lose! $(csel) beats $(psel)`);
                         alert(`You Lose! rock beats scissors`);
+                        countc++;
                     }
                     if(csel=="paper"){
                         console.log(`You Win! $(psel) beats $(csel)`);
                         alert(`You Win! scissors beats paper`);
+                        countp++;
                     }
                     if(csel==psel){
                     console.log("Draw :V");
@@ -55,6 +65,15 @@
                 let psel=prompt("Enter your choice");
                 psel=psel.toLowerCase();
                 playRound(psel,csel);
+                alert(`Player: ${countp} , Computer: ${countc}`);
+            }
+
+            if(countc==5){
+                alert(" Computer wins ;-;");
+            }
+            else    
+                alert("Player Wins :)(:");
+            }
+            game();
             </script>
-    
 </html>
