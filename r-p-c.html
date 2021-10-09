@@ -1,79 +1,37 @@
 <!DOCTYPE HTML>
 <html>
-    <script>
-        let countp=0;
-        let countc=0;
-        function game(){
-            while(countp<5 && countc<5){
-                function playRound(psel,csel){
-                if(psel=="rock"){
-                    if(csel=="paper"){
-                        console.log(`You Lose! $(csel) beats $(psel)`);
-                         alert("You Lose! paper beats rock");
-                         countc++;
-                    }if(csel=="scissors"){
-                        console.log(`You Win! rock beats scissors`);
-                        alert("You Win! rock beats scissors");
-                        countp++;
-                    }
-                   if(csel==psel){
-                    console.log("Draw :V");
-                    alert("Draw :V");
-                }
-                    }
-                
-                if(psel=="paper"){
-                    if(csel=="rock"){
-                        console.log(`You Win! $(psel) beats $(csel)`);
-                        alert(`You Win! paper beats rock`);
-                        countp++;
-                    }
-                    if(csel=="scissors"){
-                        console.log(`You Lose! $(csel) beats $(psel)`);
-                         alert(`You Lose! scissors beats paper`);
-                         countc++;
-                    }
-                    if(csel==psel){
-                    console.log("Draw :V");
-                    alert("Draw :V");
-                }
-                }
-                if(psel=="scissors"){
-                    if(csel=="rock"){
-                        console.log(`You Lose! $(csel) beats $(psel)`);
-                        alert(`You Lose! rock beats scissors`);
-                        countc++;
-                    }
-                    if(csel=="paper"){
-                        console.log(`You Win! $(psel) beats $(csel)`);
-                        alert(`You Win! scissors beats paper`);
-                        countp++;
-                    }
-                    if(csel==psel){
-                    console.log("Draw :V");
-                    alert("Draw :V");
-                }
-                }
-            }
-            
-                function random(){
-                    let arr=["rock","paper","scissors"];
-                    let x=Math.floor(Math.random(1)*2);
-                    return arr[x];
-                }
-                let csel=random();
-                let psel=prompt("Enter your choice");
-                psel=psel.toLowerCase();
-                playRound(psel,csel);
-                alert(`Player: ${countp} , Computer: ${countc}`);
-            }
-
-            if(countc==5){
-                alert(" Computer wins ;-;");
-            }
-            else    
-                alert("Player Wins :)(:");
-            }
-            game();
-            </script>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="rps.css">
+    </head>
+    <body><div class="container">
+            <h4> ROCK - PAPER - SCISSOSRS</h4>
+            <div class="buttons"> <button id='bt1'><img src="rock1.jpg"></button>
+                <button id='bt2'><img src="paper.jpg"></button>
+                <button id='bt3'><img src="s2.jpg"></button></div> 
+                <div id='game'></div>
+             <div id='endgame'></div>
+                <div id='restart'></div>  </div>
+                <script src="r-p-c.js" defer></script>
+    </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
