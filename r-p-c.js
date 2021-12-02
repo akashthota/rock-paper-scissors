@@ -90,7 +90,7 @@ function restrt(){
         const r=document.querySelector('#restart');
         const rbutton=document.createElement('button');
         r.appendChild(rbutton);
-        rbutton.textContent="play again ;p";
+        rbutton.textContent="PLAY AGAIN ;p";
         rbutton.style.backgroundColor="black";
         rbutton.style.color="cadetblue";
         rbutton.addEventListener('click',rel);
